@@ -31,7 +31,7 @@ const Header = () => {
             <h1>
               Your great international adventure on DTU
               <br />
-              <span class="highlight">starts here.</span>
+              <span>starts here.</span>
             </h1>
             <h2>
               ESN DTU is a local section of Erasmus Student Network - the biggest student non-profit organisation, 
