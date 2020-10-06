@@ -8,7 +8,7 @@ import { Container } from "../global"
 const Header = () => {
   const data = useStaticQuery(graphql`
     query {
-      file(sourceInstanceName: { eq: "product" }, name: { eq: "green-skew" }) {
+      file(sourceInstanceName: { eq: "product" }, name: { eq: "asset" }) {
         childImageSharp {
           fluid(maxWidth: 1000) {
             ...GatsbyImageSharpFluid_tracedSVG
@@ -27,25 +27,17 @@ const Header = () => {
       <Container>
         <Flex>
           <HeaderTextGroup>
-            <Subtitle>Personal Finance</Subtitle>
+        
             <h1>
-              All your money,
+              Your great international adventure on DTU
               <br />
-              one account
+              <span class="highlight">starts here.</span>
             </h1>
             <h2>
-              We're building next generation personal finance tools. Sign up to
-              get early access.
+              ESN DTU is a local section of Erasmus Student Network - the biggest student non-profit organisation, 
+              working for internationalisation of education, multicultural understanding and promoting student mobility. 
             </h2>
-            <HeaderForm onSubmit={handleSubmit}>
-              <HeaderInput placeholder="Your email" />
-              <HeaderButton>Early access</HeaderButton>
-            </HeaderForm>
-            <FormSubtitle>
-              Already have a beta account?{" "}
-              <FormSubtitleLink to="/">Sign in</FormSubtitleLink>
-            </FormSubtitle>
-          </HeaderTextGroup>
+        
           <ImageWrapper>
             <StyledImage fluid={data.file.childImageSharp.fluid} />
             <br />
